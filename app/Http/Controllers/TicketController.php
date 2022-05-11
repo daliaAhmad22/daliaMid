@@ -34,7 +34,7 @@ class TicketController extends Controller
 
 
     public function showTicket($id){
-        $tickets=DB::table('tickets')->get();
+        $tickets=DB::table('tickets')->where('id',$id)->get();
         return view('showTicket',compact('tickets'));
     }
 }
